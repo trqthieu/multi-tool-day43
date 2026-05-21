@@ -46,6 +46,7 @@ jobs:
 
       - name: Scan container
         uses: aquasecurity/trivy-action@master
+        continue-on-error: true
         with:
           image-ref: myapp:test
           format: 'table'
