@@ -16,7 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   dependencies-scan:
-    needs: secrets
+    needs: secrets-scan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
         run: npm audit --audit-level=high
 
   container-scan:
-    needs: [secrets, dependencies]    # Only run if both pass
+    needs: [secrets-scan, dependencies-scan]    # Only run if both pass
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
