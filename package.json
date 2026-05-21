@@ -1,0 +1,27 @@
+{
+  "name": "multi-tool-security-demo",
+  "version": "1.0.0",
+  "description": "Demo app for multi-tool security scanning pipeline",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"No tests\" && exit 0"
+  },
+  "keywords": [
+    "security",
+    "pipeline",
+    "scanning"
+  ],
+  "author": "DevOps Learner",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.21.1",
+    "express": "^4.16.0",
+    "lodash": "4.17.20",
+    "moment": "2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
