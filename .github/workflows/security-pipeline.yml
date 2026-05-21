@@ -34,6 +34,9 @@ jobs:
 
   container-scan:
     needs: [secrets-scan, dependencies-scan]    # Only run if both pass
+    permissions:
+      contents: read          
+      security-events: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
